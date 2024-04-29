@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Plugins Example</title>
+
+  <!-- Подключение библиотеки jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Подключение плагина для слайдера (Owl Carousel) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <!-- Подключение плагина для таблиц (DataTables) -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+</head>
+<body>
+
+<!-- Пример использования слайдера Owl Carousel -->
+<div class="owl-carousel">
+  <div><img src="image1.jpg" alt="Image 1"></div>
+  <div><img src="image2.jpg" alt="Image 2"></div>
+  <div><img src="image3.jpg" alt="Image 3"></div>
+</div>
+
+<!-- Пример использования таблицы DataTables -->
+<table id="myTable" class="display">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>John</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>Doe</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>Smith</td>
+    <td>40</td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- Инициализация слайдера Owl Carousel -->
+<script>
+  $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      items:1
+    });
+  });
+</script>
+
+<!-- Инициализация таблицы DataTables -->
+<script>
+  $(document).ready(function() {
+    $('#myTable').DataTable();
+  });
+</script>
+
+</body>
+</html>

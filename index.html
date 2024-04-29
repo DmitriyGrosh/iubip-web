@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    ul {
+      list-style-type: none;
+    }
+  </style>
+</head>
+<body>
+<ul>
+  <li>Животные
+    <ul>
+      <li>Млекопитающие
+        <ul>
+          <li>Коровы</li>
+          <li>Ослы</li>
+          <li>Собаки</li>
+          <li>Тигры</li>
+        </ul>
+      </li>
+      <li>Другие
+        <ul>
+          <li>Змеи</li>
+          <li>Птицы</li>
+          <li>Ящерицы</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Рыбы
+    <ul>
+      <li>Аквариумные
+        <ul>
+          <li>Гуппи</li>
+          <li>Скалярии</li>
+        </ul>
+      </li>
+      <li>Морские
+        <ul>
+          <li>Морская форель</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<button id="toggleTree">Дерево</button>
+<script>
+  $(document).ready(function() {
+    // Функция для подсчета количества элементов li внутри указанного элемента ul
+    function countLi($ul) {
+      return $ul.find('li').length;
+    }
+
+    // Функция для отображения текста и количества вложенных элементов li
+    function displayLiInfo() {
+      $('li').each(function() {
+        let $this = $(this);
+        let text = $this.contents().filter(function() {
+          return this.nodeType === 3; // Получаем только текстовые узлы
+        }).text().trim(); // Удаляем лишние пробелы
+
+        let count = countLi($this.find('ul')); // Подсчитываем количество вложенных li
+
+        console.log('Текст элемента:', text);
+        console.log('Количество вложенных элементов:', count);
+      });
+    }
+
+    // Обработчик клика по кнопке
+    $('#toggleTree').on('click', function() {
+      $('ul').toggle('slow'); // Анимированно скрываем/показываем дерево ul
+    });
+
+    // Вызываем функцию для отображения информации о li элементах при загрузке страницы
+    displayLiInfo();
+  });
+</script>
+</body>
+</html>
