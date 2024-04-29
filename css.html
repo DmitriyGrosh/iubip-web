@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>This is a Heading</h1>
+<div student="no">
+    <p id="main">This is a paragraph.</p>
+</div>
+<p class="colortext">This is another paragraph.</p>
+<div student="yes">
+    <p >This is a paragraph.</p>
+</div>
+<div>
+    <div>
+    </div>
+    <div>
+    </div>
+    <p class="colortext">This is another paragraph.</p>
+    <div student="no">
+        <p class="colortext">This is also a paragraph.</p>
+    </div>
+    <div>
+    </div>
+</div>
+</body>
+<style>
+  p {
+    color: green;
+  }
+
+  /* Абзацы с классом colortext делаем красными */
+  p.colortext {
+    color: red;
+  }
+
+  /* Абзац с идентификатором main делаем синим */
+  #main {
+    color: blue;
+  }
+
+  /* Изменяем шрифт заголовка h1, сделаем его жирным */
+  h1 {
+    font-weight: bold;
+  }
+
+  /* Устанавливаем цвет фона страницы */
+  body {
+    background-color: lightgray;
+  }
+
+  /* Заполняем фон блока div с атрибутом student="yes" изображением */
+  div[student="yes"] {
+    background-image: url('background_image.jpg');
+  }
+
+  /* Устанавливаем внешний отступ для абзацев с классом colortext */
+  p.colortext {
+    margin: 20px;
+  }
+
+  /* Центрируем заголовок h1 */
+  h1 {
+    margin: auto;
+  }
+
+  /* Задаем внутренний левый отступ для абзаца с идентификатором main */
+  #main {
+    padding-left: 25px;
+  }
+
+  /* Задаем размеры для контейнеров div */
+  div {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Задаем размеры для внутреннего контейнера div и цвет фона */
+  div div {
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+  }
+
+  /* Изменяем цвет ссылок и их псевдоклассов */
+  a {
+    color: purple;
+  }
+
+  a:hover {
+    color: orange;
+  }
+
+  a:active {
+    color: red;
+  }
+
+  a:visited {
+    color: green;
+  }
+</style>
+</html>

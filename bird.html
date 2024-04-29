@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body class="column">
+<header class="flex full-width flex-between p-8">
+  <h3>Дима Грош</h3>
+  <div class="flex gap-8 align-center">
+    <p>Всем привет</p>
+    <p>Как дела?</p>
+    <p>Что делаешь?</p>
+  </div>
+</header>
+<main class="column">
+  <div class="me">
+    <h2>Дима Грош</h2>
+    <img src="bird.jpg " alt="bird">
+    <p>Я програб</p>
+  </div>
+  <div class="about">
+    <h2>Кто я?</h2>
+    <p>
+      В свободное время Дмитрий увлекается фотографией и путешествиями. Он считает, что каждая поездка - это возможность узнать что-то новое и расширить свой кругозор. Вместе с друзьями он часто отправляется в путешествия, фиксируя самые яркие моменты на камеру. <br />
+
+      Также Дмитрий любит программирование не только как профессиональное занятие, но и как хобби. Он постоянно изучает новые технологии и языки программирования, стремясь стать экспертом в своей области. <br />
+
+      Своим усердием, целеустремленностью и стремлением к саморазвитию Дмитрий Грош вдохновляет не только себя, но и окружающих на новые достижения и успехи. <br />
+    </p>
+  </div>
+  <div class="where">
+    <h2>Где меня найти?</h2>
+    <div class="flex gap-8">
+      <div class="column gap-8 flex-1">
+        <p>Грациозные птицы парят в небесах, словно живописные краски на голубом холсте природы. Их крылья, размахнувшись, словно дуга радуги, несут их в дальние странствия. Пение птиц наполняет воздух музыкой, призывая нас заглянуть в таинственный мир природы.</p>
+        <img src="./birds1.jpg" alt="bird">
+      </div>
+      <div class="column gap-8 flex-1">
+        <p>В толпе деревьев и кустарников суетятся маленькие пернатые создания, словно живые капли яркой краски на зеленом полотне. Их пение напоминает мелодию веселых смехов и чарующих воспоминаний о теплых летних днях. Птицы - настоящие артисты, оживляющие ландшафт своим присутствием.</p>
+        <img src="./birds2.jpg" alt="bird">
+      </div>
+      <div class="column gap-8 flex-1">
+        <p>Птицы - воплощение свободы и легкости. Взмах их крыльев рисует атласные узоры в воздухе, а их пение - мелодия, уносящая нас в далекие странствия. Они стремятся к свету, к вечному небу, будто напоминая нам о том, что и мы можем быть свободными, если только осмелимся взлететь выше.</p>
+        <img src="./birds3.jpg" alt="bird">
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="flex flex-center align-center gap-8">
+  <p>Каой-то текст</p>
+  <a href="https://www.npmjs.com/package/react-infinite-scroll-component">бесконечный скролл</a>
+</footer>
+</body>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
+
+  .flex-between {
+    justify-content: space-between;
+  }
+
+  .flex-center {
+    justify-content: center;
+  }
+
+  .align-center {
+    align-items: center;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gap-8 {
+    gap: 8px;
+  }
+
+  .p-8 {
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .me {
+    gap: 20px;
+    padding: 100px 0;
+    background: lightgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .me > img {
+    border-radius: 50%;
+  }
+
+  .about {
+    background: darkcyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: wheat;
+    line-height: 20px;
+    gap: 30px;
+    padding: 50px 0;
+  }
+
+  .where {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  footer {
+    height: 100px;
+    background: gray;
+  }
+</style>
+</html>
